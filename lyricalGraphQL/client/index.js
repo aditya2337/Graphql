@@ -6,6 +6,7 @@ import { Route, Router, hashHistory, IndexRoute } from 'react-router';
 import App from './components/App';
 import SongList from './components/SongList';
 import SongCreate from './components/SongCreate';
+import SongDetail from './components/SongDetail';
 
 import './style/style.css';
 
@@ -18,6 +19,7 @@ const Root = () => {
         <Route path="/" component={App}>
           <IndexRoute component={SongList} />
           <Route path="/song/new" component={SongCreate} />
+          <Route path="/song/:id" component={SongDetail} />
         </Route>
       </Router>
     </ApolloProvider>
